@@ -1,10 +1,11 @@
-const express = require('express');
-const { port } = require('./config.json');
+const {Client,Intents}= require('discord.js')
+const {token} = require('./config.json')
 
-const app = express();
+const client = new Client({intents:[Intents.FLAGS.GUILDS]})
 
-app.get('/', (request, response) => {
-  return response.sendFile('index.html', { root: '.' });
+client.once('ready',()=> {
+  console.log('Ready!')
 })
 
-app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
+client.login(token)
+

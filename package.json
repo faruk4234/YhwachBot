@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "nodemon index.js",
     "fix-code": "prettier-eslint --write 'source/**/*.{js,jsx}' ",
     "fix-styles": "prettier-stylelint --write 'source/**/*.{css,scss}' ",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --quiet --fix",
